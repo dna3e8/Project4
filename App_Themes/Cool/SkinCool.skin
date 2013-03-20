@@ -1,0 +1,168 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:TreeView runat="server" ExpandDepth="2" ImageSet="BulletedList3" 
+        ShowExpandCollapse="False" BackColor="#E2A2E5" ForeColor="#6D0F03">
+    <HoverNodeStyle Font-Underline="True" ForeColor="#FFB400" />
+    <NodeStyle Font-Names="Verdana" Font-Size="14px" ForeColor="#1B00FF" 
+            HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" 
+            Font-Bold="True" />
+    <ParentNodeStyle Font-Bold="True" Font-Names="Verdana" Font-Size="15px" 
+            ForeColor="#000E4D" />
+    <RootNodeStyle Font-Bold="True" Font-Names="Verdana" Font-Size="16px" 
+            ForeColor="#08004D" />
+    <SelectedNodeStyle Font-Underline="True" ForeColor="#002DFF" 
+            HorizontalPadding="0px" VerticalPadding="0px" Font-Bold="True" />
+</asp:TreeView>
+
+
+<asp:SiteMapPath runat="server" Font-Names="Comic-Sans" CssClass="caps"
+    Font-Size="0.8em" PathSeparator=" * ">
+    <CurrentNodeStyle ForeColor="#002DFF" Font-Bold="True" Font-Size="17px" />
+    <NodeStyle Font-Bold="True" ForeColor="#4D3600" Font-Size="17px" />
+    <PathSeparatorStyle Font-Bold="True" ForeColor="#000E4D" />
+    <RootNodeStyle Font-Bold="True" ForeColor="#FFB400" Font-Size="17px" />
+</asp:SiteMapPath>
+
+
+<%--  asp:Menu skin for button images --%>
+
+<asp:Menu  runat="server" 
+     	Font-Bold="True" 
+	    ForeColor="#FFFFCC" 
+        Font-Size="12px"
+        Font-Names="Verdana"
+     	Orientation="Horizontal" 
+     	StaticDisplayLevels="2"  
+     	StaticSubMenuIndent="0"  
+     	StaticEnableDefaultPopOutImage="False">
+       		<StaticMenuItemStyle 
+			CssClass="menuitem" 
+			ItemSpacing="0"/>
+        	<StaticHoverStyle 
+			CssClass="hover" />
+           	<StaticSelectedStyle 
+			ForeColor="Black" 
+			CssClass="selected" />
+                <DynamicMenuItemStyle  
+			CssClass="menuitem" />
+                <DynamicHoverStyle CssClass="hover" />
+                <DynamicMenuStyle  BackColor="Transparent" />
+</asp:Menu>
+
+
+
+ <asp:Label runat="server" Font-Bold="True" Font-Names="Georgia" 
+    ForeColor="#6D1903" Font-Size="14px" CssClass="alignright" />
+
+ <asp:Label runat="server" Font-Bold="True" Font-Names="Georgia" 
+    ForeColor="#6D1903" Font-Size="14px" SkinID="full" CssClass="fullright"  />
+
+<asp:Label runat="server" SkinID="CountDown" BackColor="#F9CFB0" BorderColor="#E64217" 
+ BorderStyle="Double" BorderWidth="3px" CssClass="clearme" 
+ Font-Bold="True" Width="100px" />
+
+
+<asp:HyperLink   
+     runat="server"  
+     ForeColor="Crimson"  
+     BorderWidth="2"  
+     BorderColor="DarkOliveGreen"  
+     Font-Size="Large"  
+     Font-Italic="true"  
+     Font-Bold="true"  
+     >  
+</asp:HyperLink>
+
+
+ <asp:LoginStatus  runat="server"
+         ForeColor="#450247" 
+         Font-Bold="True" 
+	            Font-Size="12px"
+        Font-Names="Verdana"
+        Padding="5px"
+         
+      
+ 
+ />
+                    
+<asp:LoginName runat="server"
+        Font-Bold="True" 
+	    ForeColor="#393363" 
+        Font-Size="12px"
+        Font-Names="Verdana"
+        Padding="5px"
+/>
+
+
+
+
+
+<asp:DropDownList runat="server" BackColor="#F9CFB0" 
+    ForeColor="#6D1903" Font-Bold="True" Font-Names="Verdana" Font-Size="14px" 
+    Width="130px" Height="22px">
+</asp:DropDownList>
+
+
+ <asp:TextBox SkinID="required" CssClass="required" runat="server"
+ BackColor="#F9CFB0" Width="130px" ForeColor="#6D1903" Font-Bold="True" Font-Names="Verdana" Font-Size="14px">
+</asp:TextBox>
+<asp:TextBox runat="server" BackColor="#F9B8B0" 
+    ForeColor="#0E044C" Width="130px" Font-Bold="True" Font-Names="Verdana" Font-Size="14px">
+    </asp:TextBox>
+
+     <asp:TextBox runat="server" SkinID="Comment" Width="250px"
+     BackColor="#F9B8B0" ForeColor="#0E044C" Font-Bold="True" Font-Names="Verdana" Font-Size="14px">
+    </asp:TextBox>
+
+ <asp:Button runat="server" CssClass="button" BackColor="#F9B8B0" 
+        BorderColor="#6D0F03" BorderStyle="Outset" BorderWidth="4px" 
+        Font-Names="Arial Black" Font-Size="17px" Width="200px" />
+
+        <asp:CheckBoxList runat="server" 
+                        RepeatDirection="Horizontal" Font-Bold="True" Font-Names="Georgia" 
+                        Font-Size="14px" ForeColor="Maroon">
+       </asp:CheckBoxList>
+
+        <asp:RadioButtonList runat="server" 
+                        RepeatDirection="Horizontal" Font-Bold="True" Font-Names="Georgia" 
+                        Font-Size="14px" ForeColor="Maroon">
+        </asp:RadioButtonList>
+
+        <asp:FileUpload runat="server" BackColor="#F9CFB0" Font-Bold="True" Font-Names="Georgia" 
+                  Font-Size="14px" ForeColor="Maroon" />
+
+<asp:CreateUserWizard  runat="server" BackClor="#6D0F03" 
+        BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="1px" 
+        Font-Names="Verdana" Font-Size="0.8em">
+        <ContinueButtonStyle BackColor="White" BorderColor="#C5BBAF" 
+            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+            ForeColor="#34229F" />
+        <CreateUserButtonStyle BackColor="White" BorderColor="#C5BBAF" 
+            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+            ForeColor="#34229F" />
+        <TitleTextStyle BackColor="#34229F" Font-Bold="True" ForeColor="White" />
+        
+        <HeaderStyle BackColor="#666666" BorderColor="#E6E2D8" BorderStyle="Solid" 
+            BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" 
+            HorizontalAlign="Center" />
+        <NavigationButtonStyle BackColor="White" BorderColor="#C5BBAF" 
+            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+            ForeColor="#34229F" />
+        <SideBarButtonStyle ForeColor="White" />
+        <SideBarStyle BackColor="#34229F" Font-Size="0.9em" VerticalAlign="Top" />
+        <StepStyle BorderWidth="0px" />
+    </asp:CreateUserWizard>

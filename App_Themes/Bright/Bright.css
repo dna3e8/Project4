@@ -1,0 +1,237 @@
+﻿body
+{
+    background-color: #D6153B;
+    background-image: url('Images/Bkgnd1.png');
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #000000;
+}
+
+a
+{
+    color:#150B68;
+}
+
+a:visited
+{
+    color:#2E8106;
+}
+
+a:hover
+{
+    color:#8B0721;
+}
+
+
+#Container
+{
+    background-color:White;
+}
+
+#Masthead
+{
+    color:6D0F03;
+    font-size:small;
+    text-align:right;
+}
+#banner
+{
+   background-image: url('Images/Banner2.png');   
+}
+
+#logo
+{
+    background-image: url('Images/Logo2.png'); 
+}
+#Navigation
+{
+    background-color: #808080;
+    color:#6D0F03;
+}
+
+#MainContent
+{
+    background-image: url('Images/background.jpg');
+    background-repeat: repeat-y;
+}
+
+#LeftColumn
+{
+    text-align:left;
+}
+
+#sitepath
+{
+    color: #8B0721;
+    Background: #EB768D;
+}
+
+
+#sitepath a
+{
+    color: #8B0721;
+    Background: #EB768D;
+}
+
+#sitepath a:visited
+{
+    color: #8B0721;
+    Background: #EB768D;
+}
+
+#sitepath a:hover
+{
+    color: #EB768D;
+    Background: #8B0721;
+}
+
+#RightColumn
+{
+    text-align:left;
+    font-size:small;
+}
+
+#adrotator
+{
+    text-align:center;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+#rss
+{
+    color:#D6153B;
+    background-color:#F2D87A;
+}
+
+
+#Footer
+{
+    color:#A03449;
+    background-color:#8076CF;
+    text-align:center;
+    font-size:14px;
+}
+
+h1
+{
+    font-size:large;
+    color:#0E044C;
+}
+
+h2
+{
+    font-size:10ox;
+    color:#0E044C;
+}
+
+h3
+{
+    font-size:medium;
+    color:#0E044C;
+}
+
+#contactinfo
+{
+    padding-top:5px;
+    padding-right:5px;
+}
+
+#contactinfo h1
+{
+    background-color: #B4ACE7;
+}
+
+.moveleft
+{
+    float:left;
+}
+
+.moveright
+{
+    float:right;
+}
+
+.leftpad
+{
+    padding:10px;
+}
+
+.rightpad
+{
+    padding:10px;
+}
+
+.imageleft
+{
+    float:left;
+    padding-right:10px;  
+}
+
+.imageright
+{
+    float:right;
+    padding-left:10px;
+}
+
+
+
+/* menuitem class is the CssClass value for the asp:Menu StaticMenuItemStyle 
+and also the DynamicMenuItemStyle */
+
+#menu
+{
+    background-color: #4EC713;
+}
+
+#menu .menuitem
+{
+    background-image: url('Images/button_0.png');
+    background-repeat: no-repeat; 
+    height: 30px;
+    width: 120px;
+    text-align:center;
+    padding-top:3px;
+    margin:0;
+    
+}
+
+/*needed so the asp:Menu control anchor tags when rendered in browser have
+transparent background and display as a block rather than inline element */
+
+#menu a, #menu a:visited
+{
+  background: transparent ! important;
+  color:#FFF;
+  display: block;
+}
+
+/*needed so the asp:Menu control anchor tags when rendered in browser have
+transparent background and display as a block rather than inline element */
+
+
+#menu a:hover, #menu a:active, #menu a:focus
+{
+  background: transparent ! important;
+  display: block;
+  color:white;
+}
+
+
+/* hover class is the CssClass value for the asp:Menu StaticHoverStyle and also the
+DynamicHoverStyle */
+  
+#menu .hover { 
+  background-image: url('Images/button_1.png');
+  background-repeat: no-repeat; 
+  color:F2D87A;
+  }
+  
+
+/* selected class is the CssClass value for the asp:Menu StaticSelectedStyle */
+ #menu .selected 
+  {
+      background-image: url('Images/button_2.png');
+      background-repeat: no-repeat; 
+      color:#150B68;
+  }

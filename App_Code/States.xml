@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<States>
+    <State name = "Select State" value = "Select State"  />
+    <State name = "Alabama" value = "AL"  />
+    <State name = "Alaska" value = "AK" />
+    <State name = "Arizona" value = "AZ" />
+    <State name = "Arkansas" value = "AR" />
+    <State name = "California" value = "CA" />
+    <State name = "Colorado" value = "CO" />
+    <State name = "Connecticut" value = "CT" />
+    <State name = "District of Columbia" value = "DC" />
+    <State name = "Delaware" value = "DE" />
+    <State name = "Florida" value = "FL" />
+    <State name = "Georgia" value = "GA" />
+    <State name = "Hawaii" value = "HI" />
+    <State name = "Idaho" value = "ID" />
+    <State name = "Illinois" value = "IL" />
+    <State name = "Indiana" value = "IN" />
+    <State name = "Iowa" value = "IA" />
+    <State name = "Kansas" value = "KS" />
+    <State name = "Kentucky" value = "KY" />
+    <State name = "Louisiana" value = "LA" />
+    <State name = "Maine" value = "ME" />
+    <State name = "Maryland" value = "MD" />
+    <State name = "Massachusetts" value = "MA" />
+    <State name = " Michigan " value = "MI" />
+    <State name = "Minnesota" value = "MN" />
+    <State name = "Mississippi" value = "MS" />
+    <State name = "Missouri" value = "MO" />
+    <State name = "Montana" value = "MT" />
+    <State name = "Nebraska" value = "NE" />
+    <State name = "Nevada" value = "NV" />
+    <State name = "New Hampshire" value = "NH" />
+    <State name = "New Jersey" value = "NJ" />
+    <State name = "New Mexico" value = "NM" />
+    <State name = "New York" value = "NY" />
+    <State name = "North Carolina" value = "NC" />
+    <State name = "North Dakota" value = "ND" />
+    <State name = "Ohio" value = "OH" />
+    <State name = "Oklahoma" value = "OK" />
+    <State name = "Oregon" value = "OR" />
+    <State name = "Pennsylvania" value = "PA" />
+    <State name = "Rhode Island" value = "RI" />
+    <State name = "South Carolina" value = "SC" />
+    <State name = "South Dakota" value = "SD" />
+    <State name = "Tennessee" value = "TN" />
+    <State name = "Texas" value = "TX" />
+    <State name = "Utah" value = "UT" />
+    <State name = "Vermont" value = "VT" />
+    <State name = "Virginia" value = "VA" />
+    <State name = "Washington" value = "WA" />
+    <State name = "West Virginia" value = "WV" />
+    <State name = "Wisconsin" value = "WI" />
+    <State name = "Wyoming" value = "WY" />
+</States>

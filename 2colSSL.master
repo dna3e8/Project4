@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="2colSSL.master.cs" Inherits="_2colSSL" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Candie's Secret</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Container">
+
+        <div id="Masthead">
+            <div id="banner"></div>
+            <div id="logo"></div>
+                       
+        
+        </div>
+        <div id="Navigation">
+            <div id="menu">
+                 <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+                        </asp:Menu>
+
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                
+                <div class="moveright">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    <asp:LoginName ID="LoginName1" runat="server" 
+                        FormatString="You are Logged in as: {0}" />
+                </div>
+
+            </div>
+        
+        
+        </div>
+        <div id="MainContent">
+            <div id="LeftColumn">
+            <div class="leftpad">
+                <div id="sitepath">
+                     <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                     </asp:SiteMapPath>
+                 </div>
+                <asp:ContentPlaceHolder ID="LeftContent" runat="server">
+                    <h1> Headline</h1>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque ornare ipsum at erat. Quisque elementum tempus urna. Donec ornare fringilla erat. Phasellus gravida lectus vel dui. Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris urna interdum erat, nec semper dui diam ut libero. Donec adipiscing placerat metus. Integer eu eros vel risus ornare consequat. Curabitur sem erat, tempor non, ullamcorper quis, dapibus a, ante. Aliquam tempus tellus eget est. In hendrerit turpis sed ligula. Integer vulputate nibh congue magna. Duis commodo leo sit amet quam. Nunc commod
+            
+                    </p>
+                   
+
+                    <h2> subheading</h2>
+                    <p>
+            
+                        Curabitur sem erat, tempor non, ullamcorper quis, dapibus a, ante. Aliquam 
+                        tempus tellus eget est. In hendrerit turpis sed ligula. Integer vulputate nibh 
+                        congue magna. Duis commodo leo sit amet quam. Nunc commodo sodales nunc. Donec 
+                        est nunc, porttitor et, accumsan nec, pretium quis, mauris. Duis sapien. Nulla 
+                        felis lorem, accumsan vitae, ultricies et, hendrerit vel, massa. In nonummy 
+                        tortor et metus. Aenean lacinia orci non risus. Aenean vulputate vel lectus. 
+                        Aliquam erat volutpat. Duis diam. Proin sed turpis in urna varius venenatis. 
+                        Morbi sit amet ligula eget est semper tempor. Sed sodales, arcu quis se</p>
+
+                    <h3>Subheading 2</h3>
+                    <ul>
+                        <li>
+                            Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris urna interdum erat,
+                        </li>
+                       
+                        <li>
+                            Fusce eget justo at odio posuere dignissim. Sed p
+                        </li>
+                        
+                        <li>
+                                Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris
+                        </li>
+            
+            
+                    </ul>
+                </asp:ContentPlaceHolder>
+            </div>
+            </div>
+            <div id="RightColumn">                              
+                    <div class="rightpad">
+                     <asp:ContentPlaceHolder ID="RightContent" runat="server">
+                         <div id="adrotator">
+                             <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" 
+                            DataSourceID="XmlDataSource1"/>
+                             <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
+                            DataFile="~/App_Code/Ad.xml"></asp:XmlDataSource>
+                         </div>
+                         <div id="rss">
+                             <asp:DataList ID="DataList1" runat="server" DataSourceID="XmlDataSource2">
+                                 <ItemTemplate>
+                                     <h3>
+                                         <a href='<%# XPath("link") %>' target="_blank">
+                                         <asp:Label runat="server" ID="rsstitle" Text='<%# XPath("title") %>'></asp:Label>
+                                         </a>
+                                     </h3>
+                                     <p id="rsspub">
+                                         <i>Published <%#XPath("pubDate")%></i>
+                                     </p>
+                                     <p id="rssdesc">
+                                         <%#XPath("description")%>
+                                     </p>
+                                     <p id="rsslink">
+                                         [<a href='<%# XPath("link") %> ' target="_blank">Read More</a>]
+                                     </p>
+                                     <br />
+                                 </ItemTemplate>
+                             </asp:DataList>
+                             <asp:XmlDataSource ID="XmlDataSource2" runat="server" 
+                                 DataFile="http://kimcommando.wordpress.com/rss.xml" XPath="rss/channel/item[position( ) &lt;= 3]" >
+                             </asp:XmlDataSource>
+
+
+                            <%-- <asp:DataList ID="DataList1" runat="server" DataSourceID="XmlDataSource2" 
+                                 Width="100%">
+                                 <ItemStyle Width="280px" />
+                                 <ItemTemplate>
+                                     <h4>
+                                         <a href='<%# XPath("link") %>' target="_blank">
+                                         <asp:Label runat="server" ID="TitleLabel" Text='<%# XPath("title") %>'></asp:Label>
+                                         </a>
+                                     </h4>
+                                     <p>
+                                         <i>Published <%#XPath("pubDate")%></i>
+                                     </p>
+                                     <p>
+                                         <asp:Label runat="server" ID="DescriptionLabel" Text='<%# XPath("description") %>'></asp:Label>
+                                     </p>
+                                     <p>
+                                         [<a href='<%# XPath("link") %> ' target="_blank">Read More</a>]
+                                     </p>
+                                     <br />
+                                 </ItemTemplate>
+                             </asp:DataList>
+                             <asp:XmlDataSource ID="XmlDataSource2" runat="server" DataFile="http://kimcommando.wordpress.com/rss.xml"
+                                XPath="rss/channel/item[position( ) &lt;= 3]"></asp:XmlDataSource>--%>
+                         </div>
+
+                                            
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+
+
+        <div id="Footer">
+            <div>
+            This Website was Created for Educational Purposes <br />
+                <asp:HyperLink ID="ContactUs" SkinID="footer" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+            <p>
+            Last Modified: 16 Feb 2013
+                            </p>
+            </div> 
+
+        </div>
+    </div>
+    </form>
+</body>
+</html>

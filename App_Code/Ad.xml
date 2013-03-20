@@ -1,0 +1,75 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<Advertisements>  
+  <Ad>
+      <ImageUrl>~/Images/Ads/Ad1.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad2.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>5</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad3.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>2</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad4.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>4</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad5.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad6.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad7.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad8.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>5</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>~/Images/Ads/Ad9.jpg</ImageUrl>
+      <NavigateUrl>http://www.uvu.edu</NavigateUrl>
+      <AlternateText>
+         Utah Valley University
+       </AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+</Advertisements>

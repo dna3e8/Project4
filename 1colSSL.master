@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="1colSSL.master.cs" Inherits="_1colSSL" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>Candie's Secret</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Container">
+
+        <div id="Masthead">
+            <div id="banner"></div>
+            <div id="logo"></div>
+                       
+        
+        </div>
+        <div id="Navigation">
+            <div id="menu">
+                 <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+                        </asp:Menu>
+
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                
+                <div class="moveright">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    <asp:LoginName ID="LoginName1" runat="server" 
+                        FormatString="You are Logged in as: {0}" />
+                </div>
+
+            </div>
+        
+        
+        </div>
+        <div id="MainContent">
+            <div id="OneColumn">
+            <div class="leftpad">
+                <div id="sitepath">
+                     <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                     </asp:SiteMapPath>
+                 </div>
+                <asp:ContentPlaceHolder ID="LeftContent" runat="server">
+                    <h1> Headline</h1>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque ornare ipsum at erat. Quisque elementum tempus urna. Donec ornare fringilla erat. Phasellus gravida lectus vel dui. Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris urna interdum erat, nec semper dui diam ut libero. Donec adipiscing placerat metus. Integer eu eros vel risus ornare consequat. Curabitur sem erat, tempor non, ullamcorper quis, dapibus a, ante. Aliquam tempus tellus eget est. In hendrerit turpis sed ligula. Integer vulputate nibh congue magna. Duis commodo leo sit amet quam. Nunc commod
+            
+                    </p>
+                   
+
+                    <h2> subheading</h2>
+                    <p>
+            
+                        Curabitur sem erat, tempor non, ullamcorper quis, dapibus a, ante. Aliquam 
+                        tempus tellus eget est. In hendrerit turpis sed ligula. Integer vulputate nibh 
+                        congue magna. Duis commodo leo sit amet quam. Nunc commodo sodales nunc. Donec 
+                        est nunc, porttitor et, accumsan nec, pretium quis, mauris. Duis sapien. Nulla 
+                        felis lorem, accumsan vitae, ultricies et, hendrerit vel, massa. In nonummy 
+                        tortor et metus. Aenean lacinia orci non risus. Aenean vulputate vel lectus. 
+                        Aliquam erat volutpat. Duis diam. Proin sed turpis in urna varius venenatis. 
+                        Morbi sit amet ligula eget est semper tempor. Sed sodales, arcu quis se</p>
+
+                    <h3>Subheading 2</h3>
+                    <ul>
+                        <li>
+                            Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris urna interdum erat,
+                        </li>
+                       
+                        <li>
+                            Fusce eget justo at odio posuere dignissim. Sed p
+                        </li>
+                        
+                        <li>
+                                Fusce eget justo at odio posuere dignissim. Sed porta, turpis sit amet viverra rhoncus, mauris
+                        </li>
+            
+            
+                    </ul>
+                </asp:ContentPlaceHolder>
+            </div>
+            </div>
+           
+            <div class="clearfloat"></div>
+        </div>
+
+
+        <div id="Footer">
+            <div>
+            This Website was Created for Educational Purposes <br />
+                <asp:HyperLink ID="ContactUs" SkinID="footer" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+            <p>
+            Last Modified: 16 Feb 2013
+                            </p>
+            </div> 
+
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

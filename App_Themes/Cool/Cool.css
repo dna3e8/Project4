@@ -1,0 +1,302 @@
+﻿body
+{
+    background-color: #B4ACE7;
+    background-image: url('Images/Bkgnd2.png');
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #000000;
+}
+
+a
+{
+    color:#0E044C;
+}
+
+a:visited
+{
+    color:#450247;
+}
+
+a:hover
+{
+    color:#E62F17;
+}
+
+
+#Container
+{
+    background-color:White;
+}
+
+#Masthead
+{
+    color:#6D0F03;
+    font-size:small;
+    text-align:right;
+}
+#banner
+{
+   background-image: url('Images/Banner2.png');   
+}
+
+#logo
+{
+    background-image: url('Images/Logo2.png'); 
+}
+#Navigation
+{
+    background-color: #808080;
+    color:#6D0F03;
+}
+
+#MainContent
+{
+    background-image: url('Images/background.jpg');
+    background-repeat: repeat-y;
+}
+
+#LeftColumn
+{
+    text-align:left;
+}
+
+#sitepath
+{
+    color: #F9B8B0;
+    Background: #8F483F;
+}
+
+
+#sitepath a
+{
+    color: #F9B8B0;
+    Background: #8F483F;
+}
+
+#sitepath a:visited
+{
+    color: #E2A2E5;
+    Background: #8F483F;
+}
+
+#sitepath a:hover
+{
+    color: #F9B8B0;
+    Background: #0E044C;
+}
+
+#RightColumn
+{
+    text-align:left;
+    font-size:small;
+}
+
+#adrotator
+{
+    text-align:center;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+#rss
+{
+    color:#6D0F03;
+    background-color:#F9B8B0;
+}
+
+
+#Footer
+{
+    color:#6D0F03;
+    background-color:#E2A2E5;
+    text-align:center;
+    font-size:14px;
+}
+
+h1
+{
+    font-size:large;
+    color:#0E044C;
+}
+
+h2
+{
+    font-size:10ox;
+    color:#0E044C;
+}
+
+h3
+{
+    font-size:medium;
+    color:#0E044C;
+}
+
+#contactinfo
+{
+    padding-top:5px;
+    padding-right:5px;
+}
+
+#contactinfo h1
+{
+    background-color: #B4ACE7;
+}
+
+.moveleft
+{
+    float:left;
+}
+
+.moveright
+{
+    float:right;
+    padding-right: 5px;
+}
+
+.leftpad
+{
+    padding:10px;
+}
+
+.rightpad
+{
+    padding:10px;
+}
+
+.imageleft
+{
+    float:left;
+    padding-right:10px;  
+}
+
+.imageright
+{
+    float:right;
+    padding-left:10px;
+}
+
+
+
+/* menuitem class is the CssClass value for the asp:Menu StaticMenuItemStyle 
+and also the DynamicMenuItemStyle */
+
+#menu
+{
+    background-color: #E2A2E5;
+}
+
+#menu .menuitem
+{
+    background-image: url('Images/button_0.png');
+    background-repeat: no-repeat; 
+    height: 30px;
+    width: 120px;
+    text-align:center;
+    padding-top:3px;
+    margin:0;
+}
+
+/*needed so the asp:Menu control anchor tags when rendered in browser have
+transparent background and display as a block rather than inline element */
+
+#menu a, #menu a:visited
+{
+  background: transparent ! important;
+  display: block;
+}
+
+/*needed so the asp:Menu control anchor tags when rendered in browser have
+transparent background and display as a block rather than inline element */
+
+
+#menu a:hover, #menu a:active, #menu a:focus
+{
+  background: transparent ! important;
+  display: block;
+  color:white;
+}
+
+
+/* hover class is the CssClass value for the asp:Menu StaticHoverStyle and also the
+DynamicHoverStyle */
+  
+#menu .hover { 
+  background-image: url('Images/button_1.png');
+  background-repeat: no-repeat; 
+  }
+  
+
+/* selected class is the CssClass value for the asp:Menu StaticSelectedStyle */
+ #menu .selected
+  {
+      background-image: url('Images/button_2.png');
+      background-repeat: no-repeat; 
+  }
+
+/* Form Style Rules */
+/* Form Style Rules */
+
+fieldset
+{
+    border: solid #F97D6D 3px;
+    padding:3px;
+}
+
+legend
+{
+    padding-right: 10px;
+    color:#450247;
+    font-weight: bold;
+}
+
+fieldset ol
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+fieldset li
+{
+    line-height: 200%;
+    text-align: right;
+    margin:0;
+    padding:0;
+}
+
+
+.alignright
+{
+    text-align:right;
+    padding-right:5px;
+    vertical-align:middle;
+}
+
+.fullright
+{
+    text-align:right;
+    padding-right:5px;
+    vertical-align:middle;
+}
+
+.formfull
+{
+    text-align:left;
+}
+
+.required
+{
+    border: solid #E62F17 3px;
+}
+
+.button 
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-variant:small-caps;
+}
+
+.listleft
+{
+    text-align:center;
+}
