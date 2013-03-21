@@ -4,6 +4,91 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="LeftContent" runat="Server">
+
+    <asp:SqlDataSource ID="Customer" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:INFO3420_01Cust %>" 
+        DeleteCommand="DELETE FROM [CS.Customer] WHERE [CustomerUsername] = @CustomerUsername" 
+        InsertCommand="INSERT INTO [CS.Customer] ([CustomerUsername], [FName], [LName], [fav.Color], [Bday], [Anniversary], [Age], [income], [SexPref], [Gender], [Relation], [Rent_own], [Edu], [child5], [child10], [child19], [child40], [Comment]) VALUES (@CustomerUsername, @FName, @LName, @column1, @Bday, @Anniversary, @Age, @income, @SexPref, @Gender, @Relation, @Rent_own, @Edu, @child5, @child10, @child19, @child40, @Comment)" 
+        SelectCommand="SELECT * FROM [CS.Customer]" 
+        UpdateCommand="UPDATE [CS.Customer] SET [FName] = @FName, [LName] = @LName, [fav.Color] = @column1, [Bday] = @Bday, [Anniversary] = @Anniversary, [Age] = @Age, [income] = @income, [SexPref] = @SexPref, [Gender] = @Gender, [Relation] = @Relation, [Rent_own] = @Rent_own, [Edu] = @Edu, [child5] = @child5, [child10] = @child10, [child19] = @child19, [child40] = @child40, [Comment] = @Comment WHERE [CustomerUsername] = @CustomerUsername">
+        <DeleteParameters>
+            <asp:Parameter Name="CustomerUsername" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="CustomerUsername" Type="String" />
+            <asp:Parameter Name="FName" Type="String" />
+            <asp:Parameter Name="LName" Type="String" />
+            <asp:Parameter Name="column1" Type="String" />
+            <asp:Parameter DbType="Date" Name="Bday" />
+            <asp:Parameter DbType="Date" Name="Anniversary" />
+            <asp:Parameter Name="Age" Type="Decimal" />
+            <asp:Parameter Name="income" Type="String" />
+            <asp:Parameter Name="SexPref" Type="String" />
+            <asp:Parameter Name="Gender" Type="String" />
+            <asp:Parameter Name="Relation" Type="String" />
+            <asp:Parameter Name="Rent_own" Type="String" />
+            <asp:Parameter Name="Edu" Type="String" />
+            <asp:Parameter Name="child5" Type="Boolean" />
+            <asp:Parameter Name="child10" Type="Boolean" />
+            <asp:Parameter Name="child19" Type="Boolean" />
+            <asp:Parameter Name="child40" Type="Boolean" />
+            <asp:Parameter Name="Comment" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="FName" Type="String" />
+            <asp:Parameter Name="LName" Type="String" />
+            <asp:Parameter Name="column1" Type="String" />
+            <asp:Parameter DbType="Date" Name="Bday" />
+            <asp:Parameter DbType="Date" Name="Anniversary" />
+            <asp:Parameter Name="Age" Type="Decimal" />
+            <asp:Parameter Name="income" Type="String" />
+            <asp:Parameter Name="SexPref" Type="String" />
+            <asp:Parameter Name="Gender" Type="String" />
+            <asp:Parameter Name="Relation" Type="String" />
+            <asp:Parameter Name="Rent_own" Type="String" />
+            <asp:Parameter Name="Edu" Type="String" />
+            <asp:Parameter Name="child5" Type="Boolean" />
+            <asp:Parameter Name="child10" Type="Boolean" />
+            <asp:Parameter Name="child19" Type="Boolean" />
+            <asp:Parameter Name="child40" Type="Boolean" />
+            <asp:Parameter Name="Comment" Type="String" />
+            <asp:Parameter Name="CustomerUsername" Type="String" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="Address" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:INFO3420_01Addr %>" 
+        DeleteCommand="DELETE FROM [Address] WHERE [AddressID] = @AddressID" 
+        InsertCommand="INSERT INTO [Address] ([Username], [FName], [LName], [Address], [City], [State], [Zipcode], [Active]) VALUES (@Username, @FName, @LName, @Address, @City, @State, @Zipcode, @Active)" 
+        SelectCommand="SELECT * FROM [Address]" 
+        UpdateCommand="UPDATE [Address] SET [Username] = @Username, [FName] = @FName, [LName] = @LName, [Address] = @Address, [City] = @City, [State] = @State, [Zipcode] = @Zipcode, [Active] = @Active WHERE [AddressID] = @AddressID">
+        <DeleteParameters>
+            <asp:Parameter Name="AddressID" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="FName" Type="String" />
+            <asp:Parameter Name="LName" Type="String" />
+            <asp:Parameter Name="Address" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="State" Type="String" />
+            <asp:Parameter Name="Zipcode" Type="String" />
+            <asp:Parameter Name="Active" Type="Boolean" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="FName" Type="String" />
+            <asp:Parameter Name="LName" Type="String" />
+            <asp:Parameter Name="Address" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="State" Type="String" />
+            <asp:Parameter Name="Zipcode" Type="String" />
+            <asp:Parameter Name="Active" Type="Boolean" />
+            <asp:Parameter Name="AddressID" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+
+    <br />
+
     <div>
         <h1>
             Account Information</h1>
