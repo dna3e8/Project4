@@ -10,7 +10,7 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        ErrorsLBL.Text = "";
     }
     protected void SubmitBTN_Click(object sender, EventArgs e)
     {
@@ -22,6 +22,8 @@ public partial class Default2 : System.Web.UI.Page
         Boolean child10 = CheckBoxList1.Items[1].Selected;
         Boolean child19 = CheckBoxList1.Items[2].Selected;
         Boolean child40 = CheckBoxList1.Items[3].Selected;
+
+        ErrorsLBL.Text = "";
 
         // Required Insert
         CustomerSDS.InsertParameters["FName"].DefaultValue = FNameTXT.Text;

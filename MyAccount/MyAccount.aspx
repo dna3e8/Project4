@@ -273,7 +273,7 @@
                     <asp:RadioButtonList ID="EduRBL" runat="server" RepeatDirection="Horizontal">
                         <asp:ListItem Selected="True" Value="HighSchool">High School</asp:ListItem>
                         <asp:ListItem>Collage</asp:ListItem>
-                        <asp:ListItem Value="PostCollage">Post Collage</asp:ListItem>
+                        <asp:ListItem Value="PCollage">Post Collage</asp:ListItem>
                     </asp:RadioButtonList>
                 </li>
                 <li class="formsm">
