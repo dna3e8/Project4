@@ -34,7 +34,7 @@
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
             DataKeyNames="ProductID" DataSourceID="SqlDataSource1" PageSize="5">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ValidationGroup="Grid" />
                 <asp:TemplateField HeaderText="PName" SortExpression="PName">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("PName") %>'></asp:TextBox>
@@ -105,8 +105,8 @@
         <li class="formleft"></li>
         <li class="formright"></li>
         <li class="formleft">
-            <asp:Label ID="AgLBL" runat="server" Text="Age:"></asp:Label>
-            <asp:TextBox ID="AgeTXT" runat="server"></asp:TextBox>
+            <asp:Label ID="OnhandLBL" runat="server" Text="Onhand:"></asp:Label>
+            <asp:TextBox ID="OnhandTXT" runat="server"></asp:TextBox>
         </li>
     </ol>
     <p>
