@@ -5,12 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="LeftContent" runat="Server">
 
-    <asp:SqlDataSource ID="Customer" runat="server" 
+    <asp:SqlDataSource ID="CustomerSDS" runat="server" 
         ConnectionString="<%$ ConnectionStrings:INFO3420_01Cust %>" 
         DeleteCommand="DELETE FROM [CS.Customer] WHERE [CustomerUsername] = @CustomerUsername" 
-        InsertCommand="INSERT INTO [CS.Customer] ([CustomerUsername], [FName], [LName], [fav.Color], [Bday], [Anniversary], [Age], [income], [SexPref], [Gender], [Relation], [Rent_own], [Edu], [child5], [child10], [child19], [child40], [Comment]) VALUES (@CustomerUsername, @FName, @LName, @column1, @Bday, @Anniversary, @Age, @income, @SexPref, @Gender, @Relation, @Rent_own, @Edu, @child5, @child10, @child19, @child40, @Comment)" 
+        InsertCommand="INSERT INTO [CS.Customer] ([CustomerUsername], [FName], [LName], [favColor], [Bday], [Anniversary], [Age], [income], [SexPref], [Gender], [Relation], [Rent_own], [Edu], [child5], [child10], [child19], [child40], [Comment], [phone]) VALUES (@CustomerUsername, @FName, @LName, @favColor, @Bday, @Anniversary, @Age, @income, @SexPref, @Gender, @Relation, @Rent_own, @Edu, @child5, @child10, @child19, @child40, @Comment, @phone)" 
         SelectCommand="SELECT * FROM [CS.Customer]" 
-        UpdateCommand="UPDATE [CS.Customer] SET [FName] = @FName, [LName] = @LName, [fav.Color] = @column1, [Bday] = @Bday, [Anniversary] = @Anniversary, [Age] = @Age, [income] = @income, [SexPref] = @SexPref, [Gender] = @Gender, [Relation] = @Relation, [Rent_own] = @Rent_own, [Edu] = @Edu, [child5] = @child5, [child10] = @child10, [child19] = @child19, [child40] = @child40, [Comment] = @Comment WHERE [CustomerUsername] = @CustomerUsername">
+        
+        UpdateCommand="UPDATE [CS.Customer] SET [FName] = @FName, [LName] = @LName, [favColor] = @favColor, [Bday] = @Bday, [Anniversary] = @Anniversary, [Age] = @Age, [income] = @income, [SexPref] = @SexPref, [Gender] = @Gender, [Relation] = @Relation, [Rent_own] = @Rent_own, [Edu] = @Edu, [child5] = @child5, [child10] = @child10, [child19] = @child19, [child40] = @child40, [Comment] = @Comment, [phone] = @phone WHERE [CustomerUsername] = @CustomerUsername">
         <DeleteParameters>
             <asp:Parameter Name="CustomerUsername" Type="String" />
         </DeleteParameters>
@@ -18,7 +19,7 @@
             <asp:Parameter Name="CustomerUsername" Type="String" />
             <asp:Parameter Name="FName" Type="String" />
             <asp:Parameter Name="LName" Type="String" />
-            <asp:Parameter Name="column1" Type="String" />
+            <asp:Parameter Name="favColor" Type="String" />
             <asp:Parameter DbType="Date" Name="Bday" />
             <asp:Parameter DbType="Date" Name="Anniversary" />
             <asp:Parameter Name="Age" Type="Decimal" />
@@ -33,11 +34,12 @@
             <asp:Parameter Name="child19" Type="Boolean" />
             <asp:Parameter Name="child40" Type="Boolean" />
             <asp:Parameter Name="Comment" Type="String" />
+            <asp:Parameter Name="phone" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="FName" Type="String" />
             <asp:Parameter Name="LName" Type="String" />
-            <asp:Parameter Name="column1" Type="String" />
+            <asp:Parameter Name="favColor" Type="String" />
             <asp:Parameter DbType="Date" Name="Bday" />
             <asp:Parameter DbType="Date" Name="Anniversary" />
             <asp:Parameter Name="Age" Type="Decimal" />
@@ -52,40 +54,42 @@
             <asp:Parameter Name="child19" Type="Boolean" />
             <asp:Parameter Name="child40" Type="Boolean" />
             <asp:Parameter Name="Comment" Type="String" />
+            <asp:Parameter Name="phone" Type="String" />
             <asp:Parameter Name="CustomerUsername" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="Address" runat="server" 
+    <asp:SqlDataSource ID="AddressSDS" runat="server" 
         ConnectionString="<%$ ConnectionStrings:INFO3420_01Addr %>" 
-        DeleteCommand="DELETE FROM [Address] WHERE [AddressID] = @AddressID" 
-        InsertCommand="INSERT INTO [Address] ([Username], [FName], [LName], [Address], [City], [State], [Zipcode], [Active]) VALUES (@Username, @FName, @LName, @Address, @City, @State, @Zipcode, @Active)" 
-        SelectCommand="SELECT * FROM [Address]" 
-        UpdateCommand="UPDATE [Address] SET [Username] = @Username, [FName] = @FName, [LName] = @LName, [Address] = @Address, [City] = @City, [State] = @State, [Zipcode] = @Zipcode, [Active] = @Active WHERE [AddressID] = @AddressID">
+        DeleteCommand="DELETE FROM [CS.Address] WHERE [A_id] = @A_id" 
+        InsertCommand="INSERT INTO [CS.Address] ([CustomerUsername], [Lname], [Fname], [StreetAddr], [State], [City], [Active]) VALUES (@CustomerUsername, @Lname, @Fname, @StreetAddr, @State, @City, @Active)" 
+        SelectCommand="SELECT * FROM [CS.Address]" 
+        
+        UpdateCommand="UPDATE [CS.Address] SET [CustomerUsername] = @CustomerUsername, [Lname] = @Lname, [Fname] = @Fname, [StreetAddr] = @StreetAddr, [State] = @State, [City] = @City, [Active] = @Active WHERE [A_id] = @A_id">
         <DeleteParameters>
-            <asp:Parameter Name="AddressID" Type="Int32" />
+            <asp:Parameter Name="A_id" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
-            <asp:Parameter Name="Username" Type="String" />
-            <asp:Parameter Name="FName" Type="String" />
-            <asp:Parameter Name="LName" Type="String" />
-            <asp:Parameter Name="Address" Type="String" />
-            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="CustomerUsername" Type="String" />
+            <asp:Parameter Name="Lname" Type="String" />
+            <asp:Parameter Name="Fname" Type="String" />
+            <asp:Parameter Name="StreetAddr" Type="String" />
             <asp:Parameter Name="State" Type="String" />
-            <asp:Parameter Name="Zipcode" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
             <asp:Parameter Name="Active" Type="Boolean" />
         </InsertParameters>
         <UpdateParameters>
-            <asp:Parameter Name="Username" Type="String" />
-            <asp:Parameter Name="FName" Type="String" />
-            <asp:Parameter Name="LName" Type="String" />
-            <asp:Parameter Name="Address" Type="String" />
-            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="CustomerUsername" Type="String" />
+            <asp:Parameter Name="Lname" Type="String" />
+            <asp:Parameter Name="Fname" Type="String" />
+            <asp:Parameter Name="StreetAddr" Type="String" />
             <asp:Parameter Name="State" Type="String" />
-            <asp:Parameter Name="Zipcode" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
             <asp:Parameter Name="Active" Type="Boolean" />
-            <asp:Parameter Name="AddressID" Type="Int32" />
+            <asp:Parameter Name="A_id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
+
+    <asp:Label ID="ErrorsLBL" runat="server" Text=""></asp:Label>
 
     <br />
 
@@ -266,10 +270,10 @@
                     <asp:Label ID="EducationLBL" runat="server" Text="Education:"></asp:Label>
                 </li>
                 <li class="formlg">
-                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-                        <asp:ListItem Selected="True">Hihg School</asp:ListItem>
+                    <asp:RadioButtonList ID="EduRBL" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem Selected="True" Value="HighSchool">High School</asp:ListItem>
                         <asp:ListItem>Collage</asp:ListItem>
-                        <asp:ListItem>Post Collage</asp:ListItem>
+                        <asp:ListItem Value="PostCollage">Post Collage</asp:ListItem>
                     </asp:RadioButtonList>
                 </li>
                 <li class="formsm">
@@ -298,9 +302,11 @@
                         ValidationExpression="(\s|.){0,300}$">*</asp:RegularExpressionValidator>
                 </li>
             </ol>
+
         </asp:Panel>
         <div class="formleft">
-            <asp:Button ID="SubmitBTN" runat="server" Text="Submit"  />
+            <asp:Button ID="SubmitBTN" runat="server" Text="Submit" 
+                onclick="SubmitBTN_Click"  />
                
         </div>
         <div class="formright">
