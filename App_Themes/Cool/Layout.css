@@ -129,3 +129,23 @@
     width: 125px;
     float:left;
 }
+
+.formleft1c
+{
+    float:left;
+    width: 400px;
+}
+
+.formright1c
+{
+    float:right;
+    width:400px;
+}
+
+.formlg1c
+{
+    float:right;
+    text-align:left;
+    width: 705px;
+    margin:0;
+}

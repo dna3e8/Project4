@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="LeftContent" Runat="Server">
 
-    <asp:Login ID="Login1" runat="server">
+    <asp:Login ID="Login1" runat="server" CreateUserUrl="~/CreateUser.aspx" >
     </asp:Login>
 
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/CreateUser.aspx">Register for a New Account </asp:HyperLink>

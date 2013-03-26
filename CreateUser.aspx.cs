@@ -26,4 +26,5 @@ public partial class Default2 : System.Web.UI.Page
         Roles.AddUserToRole(myUser, "Customer");
         Response.Redirect("~/Default.aspx");
     }
+    
 }

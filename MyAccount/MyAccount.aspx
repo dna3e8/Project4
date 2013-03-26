@@ -158,9 +158,9 @@
 
 
                     <asp:RequiredFieldValidator ID="CityRFV" ControlToValidate="CityTXT" runat="server"
-                        ErrorMessage="Last Name is Required" Display="Dynamic">*</asp:RequiredFieldValidator>
+                        ErrorMessage="City is Required" Display="Dynamic">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="CityREV" runat="server" ControlToValidate="CityTXT"
-                        ErrorMessage="Not valid last name" ValidationExpression="^[a-zA-Z'.\s]{1,40}$"
+                        ErrorMessage="Not valid city" ValidationExpression="^[a-zA-Z'.\s]{1,40}$"
                         Display="Dynamic">*</asp:RegularExpressionValidator>
 
                 </li>
